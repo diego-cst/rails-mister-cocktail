@@ -13,11 +13,11 @@
       <% @cocktails.each do |cocktail| %>
         <div class="col-xs-6 col-md-3">
           <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
-            <div class="card-description">
-              <h2>
+            <div>
+              <h2 class="card-name">
                 <%= cocktail.name %>
               </h2>
-              <ul>
+              <ul class="card-list">
                 <% cocktail.doses.each do |dose| %>
                   <li>
                     <%= dose.ingredient.name %>
