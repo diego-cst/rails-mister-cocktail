@@ -38,6 +38,9 @@ gem 'simple_form'
 
 gem 'rails-controller-testing'
 
+gem 'dotenv-rails', groups: [:development, :test]
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
