@@ -1,13 +1,26 @@
+<div class="show-banner" style="background-image: linear-gradient(rgba(255,255,255,0), rgba(0,0,0,0.78)), url('<%= cl_image_path @cocktail.photo, height: 500, width: 500, crop: :fill %>'); background-size: cover">
+  <div class="show-banner-name">
+    <%= @cocktail.name %>
+  </div>
+</div>
 
-<h2><%= @cocktail.name %></h2>
-  <ul>
-    <% @cocktail.doses.each do |dose| %>
-      <li>
-        <%= dose.ingredient.name %>
-        <%= dose.description %>
-        <%= link_to "| delete", dose_path(dose), method: :delete %>
-      </li>
-    <% end %>
-    <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
-</ul>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <ul class= "ingrediens-list">
+        <% @cocktail.doses.each do |dose| %>
+        <li>
+          <%= dose.ingredient.name %>
+          <%= dose.description %>
+          <%= link_to "", dose_path(dose), method: :delete, class: "far fa-times-circle" %>
+        </li>
+        <% end %>
+      </ul>
+      <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
+
+
+<!-- <i class="far fa-times-circle"></i> -->
 
