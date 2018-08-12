@@ -37,6 +37,18 @@
   background: black;
   opacity: 0;
 }
+.card-reviews {
+  position:absolute;
+  top: 40px;
+  left: 8px;
+
+  .fa-star {
+    height: 10px;
+    width: 10px;
+    margin: 2px;
+  }
+}
 .card-link:hover {
   opacity: 0.1;
 }
+

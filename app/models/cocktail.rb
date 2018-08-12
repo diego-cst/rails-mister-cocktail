@@ -8,12 +8,16 @@ class Cocktail < ApplicationRecord
 
   def average_score
     reviews_count = self.reviews.length
-    return "no reviews yet" if reviews_count == 0
+    return "" if reviews_count == 0
     score_sum = 0
     self.reviews.each do |review|
       score_sum += review.stars
     end
     average_score = score_sum/reviews_count
+  end
+
+  def empty_stars
+    5 - average_score.to_i
   end
 
 end

@@ -1,8 +1,9 @@
 .show-banner {
   height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+.show-banner-content {
+  position: relative;
+  top: 100px;
 }
 .ingrediens-list {
   background-color: lightgrey;
@@ -14,4 +15,18 @@
   font-size: 40px;
   letter-spacing: 4px;
   color: white;
+}
+.fa-star {
+  color: #ffc000;
+}
+.fa-times-circle {
+  margin-right: 5px;
+}
+.reviews-row {
+  margin: 20px;
+}
+.single-ingredient {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

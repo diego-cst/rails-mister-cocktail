@@ -25,7 +25,12 @@
                 <% end %>
               </ul>
               <div class="card-reviews">
-                <%= cocktail.average_score %>
+                <% cocktail.average_score.to_i.times do %>
+                  <i class="fas fa-star"></i>
+                <% end %>
+                <% cocktail.empty_stars.to_i.times do %>
+                  <i class="far fa-star"></i>
+                <% end %>
               </div>
             </div>
             <%= link_to "", cocktail_path(cocktail), class: "card-link" %>

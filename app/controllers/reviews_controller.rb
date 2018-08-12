@@ -9,7 +9,7 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.cocktail = @cocktail
     if @review.save
-      redirect_to(cocktail_path[@cocktail])
+      redirect_to(cocktail_path(@cocktail))
     else
       render(:new)
     end

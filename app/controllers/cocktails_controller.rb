@@ -21,6 +21,10 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.new()
   end
 
+  def top
+    @cocktails = Cocktail.where('reviews.stars = 5')
+  end
+
 private
   def cocktail_params
     params.require(:cocktail).permit(:name, :photo)
