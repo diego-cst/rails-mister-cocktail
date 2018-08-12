@@ -24,6 +24,9 @@
                   </li>
                 <% end %>
               </ul>
+              <div class="card-reviews">
+                <%= cocktail.average_score %>
+              </div>
             </div>
             <%= link_to "", cocktail_path(cocktail), class: "card-link" %>
           </div>

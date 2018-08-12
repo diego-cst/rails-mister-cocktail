@@ -17,6 +17,10 @@
         <% end %>
       </ul>
       <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+      <div class="cocktail-stars">
+        <%= @cocktail.average_score %>
+      </div>
+      <%= link_to "Add a review", new_cocktail_review_path(@cocktail) %>
     </div>
   </div>
 </div>
