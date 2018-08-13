@@ -22,7 +22,7 @@ class CocktailsController < ApplicationController
   end
 
   def top
-    @cocktails = Cocktail.where('reviews.stars = 5')
+    @cocktails = Cocktail.joins(:reviews).where('stars > 2')
   end
 
 private
